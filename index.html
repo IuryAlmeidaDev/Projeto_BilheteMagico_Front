@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BilheteMágico</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="trevo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
         <h1>BilheteMágico</h1>
-        <p>Gere seus números da sorte para a Mega Sena!</p>
-        <button id="gerar-bilhete">Gerar Bilhete</button>
+        <div class="controle">
+            <label for="quantidade">Escolha a quantidade de números:</label>
+            <select id="quantidade">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <button id="gerar">Gerar</button>
+            <button id="limparHistorico">Limpar</button>
+        </div>
+
+        <div class="bilhete"></div>
+
+        <div id="historico">
+            <h2>Histórico de Bilhetes</h2>
+        </div>
+
         <div id="bilhete" class="bilhete"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
