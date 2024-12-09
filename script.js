@@ -6,7 +6,14 @@ document.getElementById("gerar-bilhete").addEventListener("click", function () {
     }
     const bilhete = Array.from(numeros)
         .sort((a, b) => a - b)
-        .map(num => num.toString().padStart(2, '0'))
-        .join(" ");
-    document.getElementById("bilhete").innerText = bilhete;
+        .map(num => num.toString().padStart(2, '0')); // Adiciona zero à esquerda
+
+    const bilheteDiv = document.getElementById("bilhete");
+    bilheteDiv.innerHTML = ""; // Limpa os números anteriores
+
+    bilhete.forEach(num => {
+        const span = document.createElement("span");
+        span.textContent = num;
+        bilheteDiv.appendChild(span);
+    });
 });
