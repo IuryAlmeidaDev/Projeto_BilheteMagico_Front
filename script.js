@@ -1,7 +1,6 @@
 document.getElementById('gerar').addEventListener('click', function () {
     const quantidade = parseInt(document.getElementById('quantidade').value);
     const bilhete = gerarBilhete(quantidade);
-
     const bilheteContainer = document.querySelector('.bilhete');
     bilheteContainer.innerHTML = '';
     bilhete.forEach(num => {
@@ -15,6 +14,13 @@ document.getElementById('gerar').addEventListener('click', function () {
     historicoItem.classList.add('historico-bilhete');
     historicoItem.textContent = bilhete.join(' - ');
     historicoContainer.appendChild(historicoItem);
+
+    historicoContainer.style.display = 'block';
+
+    const container = document.querySelector('.container');
+    container.classList.remove('animar');
+    void container.offsetWidth;
+    container.classList.add('animar');
 });
 
 function gerarBilhete(quantidade) {
@@ -25,9 +31,10 @@ function gerarBilhete(quantidade) {
             numeros.push(num);
         }
     }
-    return numeros;
+    return numeros.sort((a, b) => a - b);
 }
 
 document.getElementById('limparHistorico').addEventListener('click', function () {
     document.getElementById('historico').innerHTML = '';
+    document.getElementById('historico').style.display = 'none';
 });
