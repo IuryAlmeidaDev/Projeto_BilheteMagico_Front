@@ -1,41 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/trevo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BilheteMágico</title>
-    <link rel="icon" href="trevo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-    <div class="container">
-        <h1>BilheteMágico</h1>
-        <div class="controle">
-            <label for="quantidade">Escolha a quantidade de números:</label>
-            <select id="quantidade">
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <button id="gerar">Gerar</button>
-            <button id="limparHistorico">Limpar</button>
-        </div>
-
-        <div class="bilhete"></div>
-
-        <div id="historico" style="display: none;">
-        </div>
-
-        <div id="bilhete" class="bilhete"></div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
