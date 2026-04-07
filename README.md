@@ -25,7 +25,7 @@ npm run dev
 3. Abra no navegador:
 
 ```text
-http://localhost:3000
+http://localhost:3001
 ```
 
 4. Para gerar a build de producao:
