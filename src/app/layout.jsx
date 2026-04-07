@@ -1,8 +1,12 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Bilhete Magico Pro',
-  description: 'Dashboard de analise e geracao de jogos da Mega-Sena.'
+  title: 'Bilhete Mágico Pro',
+  description: 'Dashboard de análise e geração de jogos da Mega-Sena.'
+};
+
+export const viewport = {
+  themeColor: '#020503'
 };
 
 export default function RootLayout({ children }) {
